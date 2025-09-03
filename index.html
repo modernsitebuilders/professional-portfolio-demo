@@ -1,663 +1,645 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Johnson - Marketing Consultant</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23667eea'>S</text></svg>">
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+/* Portfolio Notice */
+.portfolio-notice {
+    background: #fff3cd;
+    border: 2px solid #ffd700;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #856404;
+    position: relative;
+    z-index: 999;
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #667eea;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px 10px 0;
+    border: 2px solid white;
+    background: white;
+    color: #667eea;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Value Proposition */
+.value-prop {
+    padding: 80px 20px;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-item {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.value-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.value-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Featured Projects */
+.featured-projects {
+    padding: 80px 20px;
+    background: #f8f9ff;
+}
+
+.featured-projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #667eea;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.project-type {
+    background: #667eea;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.project-results {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 20px;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-3px);
+}
+
+.skill-category h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    color: #666;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info h4 {
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    margin: 0;
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #667eea;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 25px;
+    }
+    
+    .project-results {
+        justify-content: space-around;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Sarah Johnson - Marketing Consultant&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90' fill='%23667eea'&gt;S&lt;/text&gt;&lt;/svg&gt;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1">/* Reset and Base Styles */</p>
-<p class="p1">* {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #fff;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.container {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">html {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>scroll-padding-top: 100px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Portfolio Notice */</p>
-<p class="p1">.portfolio-notice {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff3cd;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 2px solid #ffd700;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #856404;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 999;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Navigation */</p>
-<p class="p1">.navbar {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 1000;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-container {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 1rem 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-brand {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-menu {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 2rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-link {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: color 0.3s ease;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-link:hover,</p>
-<p class="p1">.nav-link.active {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Hero Section */</p>
-<p class="p1">.hero {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 100px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 80px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 3.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hero h2 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.95;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hero p {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.9;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hero-buttons {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 30px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.btn-primary,</p>
-<p class="p1">.btn-secondary {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 15px 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 10px 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 2px solid white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.btn-primary:hover,</p>
-<p class="p1">.btn-secondary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform: translateY(-2px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 10px 25px rgba(0,0,0,0.2);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Value Proposition */</p>
-<p class="p1">.value-prop {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 80px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.value-grid {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1000px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.value-item {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 30px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.value-item h3 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.4rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.value-item p {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Featured Projects */</p>
-<p class="p1">.featured-projects {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 80px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #f8f9ff;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.featured-projects h2 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-grid {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-card {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 10px 30px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-left: 5px solid #667eea;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-card:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform: translateY(-5px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 20px 40px rgba(0,0,0,0.15);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-header {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 15px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-header h3 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.4rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-type {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #667eea;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 5px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-description {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-results {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.result-item {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.result-number {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.result-label {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-link {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.9rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project-link:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: underline;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Skills Section */</p>
-<p class="p1">.skills {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 80px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skills h2 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skills-grid {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1000px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 5px 15px rgba(0,0,0,0.08);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-top: 4px solid #667eea;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.3s ease;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform: translateY(-3px);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category h3 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category ul {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category li {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 5px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #eee;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill-category li:last-child {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: none;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* CTA Section */</p>
-<p class="p1">.cta {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 80px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.cta-content h2 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 2.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 600;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.cta-content p {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.9;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Footer */</p>
-<p class="p1">.footer {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-content {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-info h4 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 5px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-info p {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #ccc;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-links {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-links a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: color 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 500;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.footer-links a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #667eea;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Mobile Responsiveness */</p>
-<p class="p1">@media (max-width: 768px) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-menu {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero h2 {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero p {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.project-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.project-card {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.project-results {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>justify-content: space-around;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.skills-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.value-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-content {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Portfolio Notice --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="portfolio-notice"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;PORTFOLIO EXAMPLE&lt;/strong&gt; - This is a sample website created by Modern Site Builders to demonstrate professional portfolio design capabilities. Not a real person.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navigation --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="navbar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="nav-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="nav-brand"&gt;Sarah Johnson&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="nav-menu"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#home" class="nav-link active"&gt;Home&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#about" class="nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#portfolio" class="nav-link"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#experience" class="nav-link"&gt;Experience&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact" class="nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="home" class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hero-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1&gt;Sarah Johnson&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Driving growth through strategic marketing solutions&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Results-oriented Marketing Consultant with 12+ years of experience in digital marketing and brand strategy, helping businesses achieve measurable growth and market expansion.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="hero-buttons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#portfolio" class="btn-primary"&gt;View My Work&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#contact" class="btn-secondary"&gt;Let's Connect&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Value Proposition --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="value-prop"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="value-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="value-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Growth-Focused&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Every marketing strategy is designed to drive measurable business growth and deliver strong ROI for your investment.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="value-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Rapid Implementation&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Streamlined processes that get your marketing campaigns launched quickly without compromising quality or effectiveness.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="value-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Proven Results&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Track record of increasing lead generation, improving conversion rates, and enhancing brand visibility across industries.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Featured Projects --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="portfolio" class="featured-projects"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Featured Projects&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="project-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="project-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Brand Repositioning Campaign&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="project-type"&gt;Strategy &amp; Branding&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="project-description"&gt;Led comprehensive rebranding initiative for established technology company to modernize market position and attract younger demographics while maintaining core customer loyalty.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-results"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;35%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Brand awareness increase&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;150%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Social engagement growth&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="project-link"&gt;View Case Study →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="project-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Digital Marketing Optimization&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="project-type"&gt;Performance Marketing&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="project-description"&gt;Restructured digital advertising strategy and implemented conversion tracking systems, resulting in improved campaign performance and reduced customer acquisition costs.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-results"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;60%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Lower acquisition cost&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;200%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Conversion rate improvement&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="project-link"&gt;View Case Study →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="project-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Content Marketing Program&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="project-type"&gt;Content Strategy&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="project-description"&gt;Developed and executed comprehensive content marketing strategy including blog optimization, social media campaigns, and email marketing automation for B2B software company.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="project-results"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;300%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Organic traffic growth&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-number"&gt;85%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="result-label"&gt;Lead quality improvement&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="project-link"&gt;View Case Study →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Skills &amp; Expertise --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="skills"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Core Expertise&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="skills-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="skill-category"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Digital Marketing&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Google Ads &amp; Analytics&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Facebook Advertising&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;SEO &amp; Content Marketing&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Marketing Automation&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="skill-category"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Strategy &amp; Planning&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Market Research &amp; Analysis&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Brand Positioning&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Competitive Intelligence&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Campaign Planning&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="skill-category"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Analytics &amp; Tools&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;HubSpot &amp; Salesforce&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Adobe Creative Suite&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Mailchimp &amp; Constant Contact&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Social Media Management&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CTA Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cta-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Ready to accelerate your business growth?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Let's discuss how strategic marketing can drive your business objectives forward and deliver measurable results.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="mailto:sarah.johnson@example.com" class="btn-primary"&gt;Start the Conversation&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="footer-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="footer-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Sarah Johnson&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Marketing Consultant&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Portfolio Example Created by Modern Site Builders&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="mailto:sarah.johnson@example.com"&gt;sarah.johnson@example.com&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" target="_blank"&gt;LinkedIn Profile&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Smooth scrolling for navigation links</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>anchor.addEventListener('click', function (e) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const target = document.querySelector(this.getAttribute('href'));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (target) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>target.scrollIntoView({</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>behavior: 'smooth',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>block: 'start'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Demo contact form</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('a[href^="mailto:"]').forEach(link =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>alert('Demo contact link - In a real website, this would open the user\'s email client!');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <!-- Portfolio Notice -->
+    <div class="portfolio-notice">
+        <strong>PORTFOLIO EXAMPLE</strong> - This is a sample website created by Modern Site Builders to demonstrate professional portfolio design capabilities. Not a real person.
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Sarah Johnson</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Sarah Johnson</h1>
+                <h2>Driving growth through strategic marketing solutions</h2>
+                <p>Results-oriented Marketing Consultant with 12+ years of experience in digital marketing and brand strategy, helping businesses achieve measurable growth and market expansion.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <div class="value-grid">
+                <div class="value-item">
+                    <h3>Growth-Focused</h3>
+                    <p>Every marketing strategy is designed to drive measurable business growth and deliver strong ROI for your investment.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Rapid Implementation</h3>
+                    <p>Streamlined processes that get your marketing campaigns launched quickly without compromising quality or effectiveness.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Proven Results</h3>
+                    <p>Track record of increasing lead generation, improving conversion rates, and enhancing brand visibility across industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="portfolio" class="featured-projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Brand Repositioning Campaign</h3>
+                        <span class="project-type">Strategy & Branding</span>
+                    </div>
+                    <p class="project-description">Led comprehensive rebranding initiative for established technology company to modernize market position and attract younger demographics while maintaining core customer loyalty.</p>
+                    <div class="project-results">
+                        <div class="result-item">
+                            <span class="result-number">35%</span>
+                            <span class="result-label">Brand awareness increase</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">150%</span>
+                            <span class="result-label">Social engagement growth</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Digital Marketing Optimization</h3>
+                        <span class="project-type">Performance Marketing</span>
+                    </div>
+                    <p class="project-description">Restructured digital advertising strategy and implemented conversion tracking systems, resulting in improved campaign performance and reduced customer acquisition costs.</p>
+                    <div class="project-results">
+                        <div class="result-item">
+                            <span class="result-number">60%</span>
+                            <span class="result-label">Lower acquisition cost</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">200%</span>
+                            <span class="result-label">Conversion rate improvement</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Content Marketing Program</h3>
+                        <span class="project-type">Content Strategy</span>
+                    </div>
+                    <p class="project-description">Developed and executed comprehensive content marketing strategy including blog optimization, social media campaigns, and email marketing automation for B2B software company.</p>
+                    <div class="project-results">
+                        <div class="result-item">
+                            <span class="result-number">300%</span>
+                            <span class="result-label">Organic traffic growth</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">85%</span>
+                            <span class="result-label">Lead quality improvement</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise -->
+    <section class="skills">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Digital Marketing</h3>
+                    <ul>
+                        <li>Google Ads & Analytics</li>
+                        <li>Facebook Advertising</li>
+                        <li>SEO & Content Marketing</li>
+                        <li>Marketing Automation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Strategy & Planning</h3>
+                    <ul>
+                        <li>Market Research & Analysis</li>
+                        <li>Brand Positioning</li>
+                        <li>Competitive Intelligence</li>
+                        <li>Campaign Planning</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Analytics & Tools</h3>
+                    <ul>
+                        <li>HubSpot & Salesforce</li>
+                        <li>Adobe Creative Suite</li>
+                        <li>Mailchimp & Constant Contact</li>
+                        <li>Social Media Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to accelerate your business growth?</h2>
+                <p>Let's discuss how strategic marketing can drive your business objectives forward and deliver measurable results.</p>
+                <a href="mailto:sarah.johnson@example.com" class="btn-primary">Start the Conversation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Sarah Johnson</h4>
+                    <p>Marketing Consultant</p>
+                    <p><strong>Portfolio Example Created by Modern Site Builders</strong></p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:sarah.johnson@example.com">sarah.johnson@example.com</a>
+                    <a href="#" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Demo contact form
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Demo contact link - In a real website, this would open the user\'s email client!');
+            });
+        });
+    </script>
 </body>
 </html>
-
